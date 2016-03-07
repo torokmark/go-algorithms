@@ -1,9 +1,5 @@
 package sorting
 
-import (
-  "fmt"
-)
-
 func Insertion(arr []int) {
   len := len(arr)
 
@@ -18,11 +14,4 @@ func Insertion(arr []int) {
 
     arr[pos] = current
   }
-}
-
-func main() {
-  arr := []int{6, 3, 5, 3, 1, 10, 9, 4, 8, 6}
-  fmt.Println("Unsorted >> ", arr)
-  Insertion(arr)
-  fmt.Println("Insertion sorted >> ", arr)
 }

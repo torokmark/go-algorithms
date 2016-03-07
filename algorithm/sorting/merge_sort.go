@@ -1,19 +1,22 @@
 package sorting
 
 import (
-  "fmt"
+    "fmt"
 )
 
 func MergeSort(arr []int) []int {
   ret := []int{}
-  midIdx := len(arr) / 2
 
   if len(arr) < 2 {
     return arr
   }
 
+  midIdx := len(arr) / 2
   left := MergeSort(arr[:midIdx])
   right := MergeSort(arr[midIdx:])
+  fmt.Println(left)
+  fmt.Println(right)
+
 
   i, j := 0, 0
   for i < len(left) && j < len(right) {
@@ -25,14 +28,9 @@ func MergeSort(arr []int) []int {
       j += 1
     }
   }
-
+  fmt.Println(ret)
   ret = append(ret, left[i:]...)
   ret = append(ret, right[j:]...)
+  fmt.Println(ret)
   return ret
-}
-
-func main() {
-  arr := []int{6, 3, 5, 3, 1, 10, 9, 4, 8, 6}
-  fmt.Println("Unsorted >> ", arr)
-  fmt.Println("Mergesorted >> ", MergeSort(arr))
 }

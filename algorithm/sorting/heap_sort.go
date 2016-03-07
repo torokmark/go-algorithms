@@ -1,9 +1,5 @@
 package sorting
 
-import (
-  "fmt"
-)
-
 func HeapSort(arr []int) {
   start := len(arr)
   end := start
@@ -12,7 +8,7 @@ func HeapSort(arr []int) {
   }
   for i := end - 1; i > 0; i -= 1 {
     arr[0], arr[i] = arr[i], arr[0]
-    heapify(i, 0)
+    //heapify(i, 0)
   }
 
 }
@@ -30,13 +26,6 @@ func heapify(arr []int, currIdx int) {
   }
   if max != currIdx {
     //currIdx, max = max, currIdx
-    heapify(len(arr), currIdx)
+    //heapify(len(arr), currIdx)
   }
-}
-
-func main() {
-  arr := []int{6, 3, 5, 3, 1, 10, 9, 4, 8, 6}
-  fmt.Println("Unsorted >> ", arr)
-  HeapSort(arr)
-  fmt.Println("Heap sorted >> ", arr)
 }

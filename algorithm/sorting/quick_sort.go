@@ -1,11 +1,6 @@
 package sorting
 
-import (
-  "fmt"
-)
-
 func QuickSort(arr []int) []int {
-  //fmt.Println("bent ", arr)
   less := []int{}
   equal := []int{}
   greater := []int{}
@@ -27,16 +22,9 @@ func QuickSort(arr []int) []int {
     greater = QuickSort(greater)
     ret := append(less, equal...)
     ret = append(ret, greater...)
-    //fmt.Println("    ", ret)
+
     return ret
   } else {
     return arr
   }
-}
-
-func main() {
-  arr := []int{6, 3, 5, 3, 1, 10, 9, 4, 8, 6}
-  fmt.Println("Unsorted >> ", arr)
-  //QuickSort(arr)
-  fmt.Println("Quicksorted >> ", QuickSort(arr))
 }

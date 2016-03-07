@@ -1,9 +1,5 @@
 package sorting
 
-import (
-  "fmt"
-)
-
 func Selection(arr []int) {
   len := len(arr)
 
@@ -17,11 +13,4 @@ func Selection(arr []int) {
 
     arr[i], arr[maxIdx] = arr[maxIdx], arr[i]
   }
-}
-
-func main() {
-  arr := []int{6, 3, 5, 3, 1, 10, 9, 4, 8, 6}
-  fmt.Println("Unsorted >> ", arr)
-  Selection(arr)
-  fmt.Println("Selection sorted >> ", arr)
 }
