@@ -5,15 +5,18 @@ import (
 	"mygithub/go-algorithms/datastructures/stack"
 	"mygithub/go-algorithms/datastructures/queue"
 	"mygithub/go-algorithms/datastructures/bintree"
-	"mygithub/go-algorithms/datastructures/heap"
+	//"mygithub/go-algorithms/datastructures/heap"
+
 )
 
 func main() {
-	stackTest()
-	queueTest()
+	//stackTest()
+	//queueTest()
 
-	bintreeTest()
-	bintreesTest()
+	//bintreeTest()
+	//bintreesTest()
+	//heapTest()
+	TestAlgorithm()
 }
 
 
@@ -74,8 +77,10 @@ func bintreesTest() {
 	fmt.Println(b.Get(2))
 }
 
+/*
 func heapTest() {
 	h := heap.NewHeap()
 
 	fmt.Println(h)
 }
+*/
